@@ -1,0 +1,105 @@
+:root {
+  --primary-color: #ffffff; /* White */
+  --secondary-color: #e0e0e0; /* Light gray for contrast */
+  --background-gradient-start: #000000; /* Black */
+  --background-gradient-end: #4a4a4a; /* Dark gray */
+  --text-color: #ffffff; /* White text for contrast */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, var(--background-gradient-start), var(--background-gradient-end));
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+h1, h2, h3, p {
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+input[type="text"], input[type="file"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px #222, -4px -4px 10px #444;
+  width: calc(100% - 40px);
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="file"]:focus {
+  outline: none;
+  box-shadow: inset 1px 1px 2px #222, inset -1px -1px 2px #444;
+}
+
+.form-group {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #222, -5px -5px 15px #444;
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+  display: block;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--background-gradient-start);
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 4px 4px 8px #222, -4px -4px 8px #ffffff;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f4f4f4;
+}
